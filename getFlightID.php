@@ -1,10 +1,10 @@
 <?php
 
-echo file_get_contents('php://input');
-$airline = $_GET["airline"];
-$flightNumber = $_GET["flightNumber"];
-$date = $_GET["date"];
-return json_encode([$airline]);
+$data = json_decode(file_get_contents('php://input'), true);
+$airline = $data["airline"];
+$flightNumber = $data["flightNumber"];
+$date = $data["date"];
+getFlightID($date, $airline . $flightNumber);
 
 function getFlightID($flightDate, $flightNumber) {
 
@@ -56,5 +56,5 @@ function getFlightID($flightDate, $flightNumber) {
 
     $result["cookie"] = $arr[0];
     
-    return json_encode($result);
+    echo json_encode($result);
 }
