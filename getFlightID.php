@@ -1,5 +1,6 @@
 <?php
 
+return json_encode($_GET);
 $airline = $_GET["airline"];
 $flightNumber = $_GET["flightNumber"];
 $date = $_GET["date"];
