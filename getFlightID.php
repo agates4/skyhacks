@@ -1,5 +1,10 @@
 <?php
 
+$airline = $_GET["airline"];
+$flightNumber = $_GET["flightNumber"];
+$date = $_GET["date"];
+return json_encode([$airline]);
+
 function getFlightID($flightDate, $flightNumber) {
 
     $curl = curl_init();
