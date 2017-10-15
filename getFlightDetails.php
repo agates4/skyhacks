@@ -1,5 +1,10 @@
 <?php
 
+$data = json_decode(file_get_contents('php://input'), true);
+$cookie = $data["cookie"];
+$flightID = $data["flightID"];
+getFlightDetails($cookie, $flightID);
+
 function getFlightDetails($cookie, $flightID) {
 
     $curl = curl_init();
