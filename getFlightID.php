@@ -1,6 +1,6 @@
 <?php
 
-return file_get_contents('php://input');
+echo file_get_contents('php://input');
 $airline = $_GET["airline"];
 $flightNumber = $_GET["flightNumber"];
 $date = $_GET["date"];
